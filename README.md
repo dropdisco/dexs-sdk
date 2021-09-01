@@ -1,1 +1,1 @@
-# dexs-sdk
+# dexswap-sdk-v1

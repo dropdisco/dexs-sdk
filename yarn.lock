@@ -3058,20 +3058,6 @@ detect-newline@^2.1.0:
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-2.1.0.tgz#f41f1c10be4b00e87b5f13da680759f2c5bfd3e2"
   integrity sha1-9B8cEL5LAOh7XxPaaAdZ8sW/0+I=
 
-"dexswap-core@git://github.com/Agin-DropDisco/dexs-factory.git":
-  version "0.1.6"
-  resolved "git://github.com/Agin-DropDisco/dexs-factory.git#bcf85746c724e950fbfdd89cf938626c4659235d"
-  dependencies:
-    "@truffle/hdwallet-provider" "^1.4.0"
-    openzeppelin-solidity "2.3.0"
-    typescript "^3.9.5"
-    zeppelin-solidity "^1.12.0"
-
-"dexswap-periphery@git://github.com/Agin-DropDisco/dexs-router.git":
-  version "0.3.4"
-  resolved "git://github.com/Agin-DropDisco/dexs-router.git#69ae7382abf5f2031a5162178758a0745231b115"
-  dependencies:
-    "@truffle/hdwallet-provider" "^1.4.0"
 
 diff-sequences@^24.9.0:
   version "24.9.0"

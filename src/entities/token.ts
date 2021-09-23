@@ -25,50 +25,39 @@ export class Token extends Currency {
       'WETH',
       'Wrapped Ether'
     ),
-    [ChainId.MATIC]: new Token(
-      ChainId.MATIC,
-      '0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619',
+    [ChainId.HARMONY]: new Token(
+      ChainId.HARMONY,
+      '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a',
       18,
-      'WETH',
-      'Wrapped Ether'
+      'WONE',
+      'Wrapped ONE'
     ),
-    [ChainId.MUMBAI]: new Token(
-      ChainId.MUMBAI,
-      '0x60FC5ACA39B2fff0Db67C55d85c77062ED8B604B',
+    [ChainId.HARMONY_TESTNET]: new Token(
+      ChainId.HARMONY_TESTNET,
+      '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2',
       18,
-      'WETH',
-      'Wrapped Ether'
-    ),
-    [ChainId.XDAI]: new Token(
-      ChainId.XDAI,
-      '0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1',
-      18,
-      'WETH',
-      'Wrapped Ether on xDai'
+      'WONE',
+      'Wrapped ONE'
     )
   }
 
-  public static readonly WXDAI: { [key: number]: Token } = {
-    [ChainId.XDAI]: new Token(ChainId.XDAI, '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d', 18, 'WXDAI', 'Wrapped xDAI')
-  }
-
+  // TODO:
   public static readonly xDEXS: { [key: number]: Token } = {
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0xA9c6d7F92a894310B9C04968326A9dE6D0e38724', 18, 'xDEXS', 'xDEXS'),
-    [ChainId.MATIC]: new Token(ChainId.MATIC, '0x8E8645D7A03d53bF41BcFfE26CfCCBA14354028C', 18, 'xDEXS', 'xDEXS'),
-    [ChainId.MUMBAI]: new Token(ChainId.MUMBAI, '0xBb5e7842a52d54484898B281E0E7F8a73Ee1781c', 18, 'xDEXS', 'xDEXS'),
+    [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0xBb5e7842a52d54484898B281E0E7F8a73Ee1781c', 18, 'xDEXS', 'xDEXS'),
+    [ChainId.HARMONY_TESTNET]: new Token(ChainId.HARMONY_TESTNET, '0x8E8645D7A03d53bF41BcFfE26CfCCBA14354028C', 18, 'xDEXS', 'xDEXS'),
   }
 
-  public static readonly WMATIC: { [key: number]: Token } = {
-    [ChainId.MATIC]: new Token(ChainId.MATIC, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WMATIC', 'Wrapped Matic'),
-    [ChainId.MUMBAI]: new Token(ChainId.MUMBAI, '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889', 18, 'WMATIC', 'Wrapped Matic')
+  public static readonly WONE: { [key: number]: Token } = {
+    [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a', 18, 'WONE', 'Wrapped One'),
+    [ChainId.HARMONY_TESTNET]: new Token(ChainId.HARMONY_TESTNET, '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2', 18, 'WONE', 'Wrapped One')
   }
 
   private static readonly NATIVE_CURRENCY_WRAPPER: { [chainId in ChainId]: Token } = {
     [ChainId.MAINNET]: Token.WETH[ChainId.MAINNET],
     [ChainId.RINKEBY]: Token.WETH[ChainId.RINKEBY],
-    [ChainId.MATIC]: Token.WMATIC[ChainId.MATIC],
-    [ChainId.MUMBAI]: Token.WMATIC[ChainId.MUMBAI],
-    [ChainId.XDAI]: Token.WXDAI[ChainId.XDAI]
+    [ChainId.HARMONY]: Token.WONE[ChainId.HARMONY],
+    [ChainId.HARMONY_TESTNET]: Token.WONE[ChainId.HARMONY_TESTNET]
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
@@ -128,5 +117,4 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 // reexport for convenience
 export const WETH = Token.WETH
 export const xDEXS = Token.xDEXS
-export const WXDAI = Token.WXDAI
-export const WMATIC = Token.WMATIC
+export const WONE = Token.WONE

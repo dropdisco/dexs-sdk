@@ -1,6 +1,6 @@
 import invariant from 'tiny-invariant'
 
-import { ChainId, ONE, TradeType, ZERO } from '../constants'
+import { ChainId, ONES, TradeType, ZERO } from '../constants'
 import { sortedInsert } from '../utils'
 import { Currency } from './currency'
 import { CurrencyAmount } from './fractions/currencyAmount'
@@ -220,7 +220,7 @@ export class Trade {
     if (this.tradeType === TradeType.EXACT_OUTPUT) {
       return this.outputAmount
     } else {
-      const slippageAdjustedAmountOut = new Fraction(ONE)
+      const slippageAdjustedAmountOut = new Fraction(ONES)
         .add(slippageTolerance)
         .invert()
         .multiply(this.outputAmount.raw).quotient
@@ -239,7 +239,7 @@ export class Trade {
     if (this.tradeType === TradeType.EXACT_INPUT) {
       return this.inputAmount
     } else {
-      const slippageAdjustedAmountIn = new Fraction(ONE).add(slippageTolerance).multiply(this.inputAmount.raw).quotient
+      const slippageAdjustedAmountIn = new Fraction(ONES).add(slippageTolerance).multiply(this.inputAmount.raw).quotient
       return this.inputAmount instanceof TokenAmount
         ? new TokenAmount(this.inputAmount.token, slippageAdjustedAmountIn)
         : CurrencyAmount.nativeCurrency(slippageAdjustedAmountIn, this.chainId)

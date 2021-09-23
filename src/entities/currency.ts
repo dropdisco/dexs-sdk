@@ -15,15 +15,13 @@ export class Currency {
 
   public static readonly USD: Currency = new Currency(18, 'USD', 'US dollar')
   public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether')
-  public static readonly XDAI: Currency = new Currency(18, 'XDAI', 'xDAI')
-  public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
+  public static readonly ONE: Currency = new Currency(18, 'ONE', 'ONE')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
     [ChainId.RINKEBY]: Currency.ETHER,
-    [ChainId.MATIC]: Currency.MATIC,
-    [ChainId.MUMBAI]: Currency.MATIC,
-    [ChainId.XDAI]: Currency.XDAI
+    [ChainId.HARMONY]: Currency.ONE,
+    [ChainId.HARMONY_TESTNET]: Currency.ONE
   }
 
   /**
@@ -50,6 +48,5 @@ export class Currency {
 }
 
 export const USD = Currency.USD
-export const XDAI = Currency.XDAI
 export const ETHER = Currency.ETHER
-export const MATIC = Currency.MATIC
+export const ONE = Currency.ONE

@@ -8,12 +8,11 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/Agin-DropDisco/dexs-sdk",
+  "repository": "https://github.com/Agin-DropDisco/dexs-sdk#harmony-sdk",
   "keywords": [
     "dexswap",
     "ethereum",
-    "moonbeam",
-    "matic"
+    "harmony"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
@@ -27,8 +26,8 @@
     "@makerdao/multicall": "^0.11.0",
     "big.js": "^5.2.2",
     "decimal.js-light": "^2.5.0",
-    "dexswap-core": "git://github.com/Agin-DropDisco/dexs-factory.git",
-    "dexswap-periphery": "git://github.com/Agin-DropDisco/dexs-router.git",
+    "dexswap-core": "git://github.com/Agin-DropDisco/dexs-factory.git#harmony-core",
+    "dexswap-periphery": "git://github.com/Agin-DropDisco/dexs-router.git#harmony-router",
     "jsbi": "^3.1.1",
     "node-fetch": "^2.6.1",
     "tiny-invariant": "^1.1.0",

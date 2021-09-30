@@ -18,17 +18,13 @@ const MINIMUM_STAKED_AMOUNT_NATIVE_CURRENCY: { [chainId in ChainId]: CurrencyAmo
     utils.parseUnits('0.1', Token.getNative(ChainId.MAINNET).decimals).toString(),
     ChainId.MAINNET
   ),
-  [ChainId.XDAI]: CurrencyAmount.nativeCurrency(
-    utils.parseUnits('1000', Token.getNative(ChainId.XDAI).decimals).toString(),
-    ChainId.XDAI
+  [ChainId.HARMONY]: CurrencyAmount.nativeCurrency(
+    utils.parseUnits('0.05', Token.getNative(ChainId.HARMONY).decimals).toString(),
+    ChainId.HARMONY
   ),
-  [ChainId.MATIC]: CurrencyAmount.nativeCurrency(
-    utils.parseUnits('0.05', Token.getNative(ChainId.MATIC).decimals).toString(),
-    ChainId.MATIC
-  ),
-  [ChainId.MUMBAI]: CurrencyAmount.nativeCurrency(
-    utils.parseUnits('0.05', Token.getNative(ChainId.MUMBAI).decimals).toString(),
-    ChainId.MUMBAI
+  [ChainId.HARMONY_TESTNET]: CurrencyAmount.nativeCurrency(
+    utils.parseUnits('0.05', Token.getNative(ChainId.HARMONY_TESTNET).decimals).toString(),
+    ChainId.HARMONY_TESTNET
   )
 }
 

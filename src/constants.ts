@@ -5,16 +5,14 @@ import STAKING_REWARDS_DISTRIBUTION_ABI from './abis/staking-rewards-distributio
 import {
   rinkeby as coreRinkeby,
   mainnet as coreMainnet,
-  xdai as coreXDai,
-  matic as coreMatic,
-  mumbai as coreMumbai
+  harmony_testnet as coreHarmony_Testnet,
+  harmony as coreHarmony
 } from 'dexswap-core/.contracts.json'
 import {
   rinkeby as peripheryRinkeby,
   mainnet as peripheryMainnet,
-  xdai as peripheryXDai,
-  matic as peripheryMatic,
-  mumbai as peripheryMumbai
+  harmony_testnet as peripheryHarmony_Testnet,
+  harmony as peripheryHarmony
 } from 'dexswap-periphery/.contracts.json'
 
 // exports for external consumption
@@ -23,9 +21,8 @@ export type BigintIsh = JSBI | bigint | string
 export enum ChainId {
   MAINNET = 1,
   RINKEBY = 4,
-  XDAI = 100,
-  MATIC = 137,
-  MUMBAI = 80001
+  HARMONY = 1666600000,
+  HARMONY_TESTNET = 1666700000
 }
 
 export enum TradeType {
@@ -44,25 +41,22 @@ export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 export const FACTORY_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: coreMainnet.factory,
   [ChainId.RINKEBY]: coreRinkeby.factory,
-  [ChainId.MATIC]: coreMatic.factory,
-  [ChainId.MUMBAI]: coreMumbai.factory,
-  [ChainId.XDAI]: coreXDai.factory
+  [ChainId.HARMONY]: coreHarmony.factory,
+  [ChainId.HARMONY_TESTNET]: coreHarmony_Testnet.factory
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
-  [ChainId.RINKEBY]: peripheryRinkeby.router,
   [ChainId.MAINNET]: peripheryMainnet.router,
-  [ChainId.MATIC]: peripheryMatic.router,
-  [ChainId.MUMBAI]: peripheryMumbai.router,
-  [ChainId.XDAI]: peripheryXDai.router
+  [ChainId.RINKEBY]: peripheryRinkeby.router,
+  [ChainId.HARMONY]: peripheryHarmony.router,
+  [ChainId.HARMONY_TESTNET]: peripheryHarmony_Testnet.router,
 }
 
 export const STAKING_REWARDS_FACTORY_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '0x0000000000000000000000000000000000001234',
-  [ChainId.RINKEBY]: '0x0000000000000000000000000000000000001234',
-  [ChainId.MATIC]: '0x0000000000000000000000000000000000001234',
-  [ChainId.MUMBAI]: '0x0000000000000000000000000000000000001234',
-  [ChainId.XDAI]: '0x0000000000000000000000000000000000001234'
+  [ChainId.RINKEBY]: '0x709db16a6ef437197938256460c49183dc36ca4d',
+  [ChainId.HARMONY]: '0x0000000000000000000000000000000000001234',
+  [ChainId.HARMONY_TESTNET]: '0x0000000000000000000000000000000000001234'
 }
 
 export const INIT_CODE_HASH = '0x150b4ac6b908c76f4d28c378f9d050600e012455d0383ed35598e31688ee2e7b'
@@ -72,7 +66,7 @@ export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
 // exports for internal consumption
 export const ZERO = JSBI.BigInt(0)
-export const ONE = JSBI.BigInt(1)
+export const ONES = JSBI.BigInt(1)
 export const TWO = JSBI.BigInt(2)
 export const THREE = JSBI.BigInt(3)
 export const FIVE = JSBI.BigInt(5)
@@ -99,10 +93,9 @@ export const SOLIDITY_TYPE_MAXIMA = {
 
 const MULTICALL_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '0xeefba1e63905ef1d7acba5a8513c70307c1ce441',
-  [ChainId.XDAI]: '0xb5b692a88bdfc81ca69dcb1d924f59f0413a602a',
+  [ChainId.HARMONY]: '0x4e24A3D6B6D47A4F56e4025C8A514b45C66e6d7A',
   [ChainId.RINKEBY]: '0x8c9E7447ABE0607a610a1C3E7cCC1A7B51f729C2',
-  [ChainId.MATIC]: '0x8EA37510A18233d6B081Fb54c36f76c0d58A8734',
-  [ChainId.MUMBAI]: '0xBd4B558b77301CEd3D4E4BDC45a876FFdDEDe744'
+  [ChainId.HARMONY_TESTNET]: '0xD76bF711EC7FA3740fC0ddae1A7CB648E77604e8'
 }
 
 export { MULTICALL_ABI, MULTICALL_ADDRESS, STAKING_REWARDS_FACTORY_ABI, STAKING_REWARDS_DISTRIBUTION_ABI }

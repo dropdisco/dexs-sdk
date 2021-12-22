@@ -1,5 +1,5 @@
 import { currencyEquals } from '../token'
-import { Currency, UST } from '../currency'
+import { Currency, USD } from '../currency'
 import invariant from 'tiny-invariant'
 import JSBI from 'jsbi'
 import _Big from 'big.js'
@@ -25,11 +25,11 @@ export class CurrencyAmount extends Fraction {
   }
 
   /**
-   * Helper that calls the constructor with the UST currency
-   * @param amount amount of ust experessed in wei (with 18 decimals resolution)
+   * Helper that calls the constructor with the USD currency
+   * @param amount amount of usd experessed in wei (with 18 decimals resolution)
    */
-  public static ust(amount: BigintIsh): CurrencyAmount {
-    return new CurrencyAmount(UST, amount)
+  public static usd(amount: BigintIsh): CurrencyAmount {
+    return new CurrencyAmount(USD, amount)
   }
 
   // amount _must_ be raw, i.e. in the native representation

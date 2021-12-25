@@ -45,7 +45,7 @@ export class Token extends Currency {
   public static readonly xDEXS: { [key: number]: Token } = {
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0xA9c6d7F92a894310B9C04968326A9dE6D0e38724', 18, 'xDEXS', 'xDEXS'),
     [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0xAe04642872a4B3a479D1404048e44166c9aA7a19', 18, 'xDEXS', 'xDEXS'),
-    [ChainId.HARMONY_TESTNET]: new Token(ChainId.HARMONY_TESTNET, '0x9a7db07DfB901774FCcBB201C9e07e6A2cEa25E0', 18, 'xDEXS', 'xDEXS'),
+    [ChainId.HARMONY_TESTNET]: new Token(ChainId.HARMONY_TESTNET, '0xc106b786a6c7C698fcAeD6D49609e1b40C6694ef', 18, 'xDEXS', 'xDEXS'),
   }
 
   public static readonly WONE: { [key: number]: Token } = {

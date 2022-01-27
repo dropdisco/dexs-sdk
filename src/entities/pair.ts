@@ -9,7 +9,7 @@ import {
   BigintIsh,
   MINIMUM_LIQUIDITY,
   ZERO,
-  ONES,
+  ONE,
   _30,
   _10000,
   defaultSwapFee,
@@ -225,7 +225,7 @@ export class Pair {
     )
     const inputAmount = new TokenAmount(
       outputAmount.token.equals(this.token0) ? this.token1 : this.token0,
-      JSBI.add(JSBI.divide(numerator, denominator), ONES)
+      JSBI.add(JSBI.divide(numerator, denominator), ONE)
     )
     return [
       inputAmount,

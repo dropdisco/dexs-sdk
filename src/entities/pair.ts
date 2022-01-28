@@ -45,9 +45,6 @@ let PAIR_ADDRESS_CACHE: {
   },
   [RoutablePlatform.VIPERSWAP.name]: {
     ...INITIAL_CACHE_STATE
-  },
-  [RoutablePlatform.SWOOP.name]: {
-    ...INITIAL_CACHE_STATE
   }
 }
 

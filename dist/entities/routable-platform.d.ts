@@ -13,7 +13,6 @@ export declare class RoutablePlatform {
     static readonly UNISWAP: RoutablePlatform;
     static readonly SUSHISWAP: RoutablePlatform;
     static readonly VIPERSWAP: RoutablePlatform;
-    static readonly SWOOP: RoutablePlatform;
     constructor(name: string, factoryAddress: {
         [supportedChainId in ChainId]?: string;
     }, routerAddress: {

@@ -3226,7 +3226,7 @@ detect-newline@^2.1.0:
 
 "dexswap-periphery@git://github.com/Agin-DropDisco/dexs-router.git#master-router":
   version "0.3.4"
-  resolved "git://github.com/Agin-DropDisco/dexs-router.git#b8bcd84bed09e238c2791806cfe0520f26fa57f0"
+  resolved "git://github.com/Agin-DropDisco/dexs-router.git#6a06d676006900f565e82ba63e772a096c528f35"
   dependencies:
     "@truffle/hdwallet-provider" "^1.4.0"
 

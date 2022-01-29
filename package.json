@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/DexSwap-Project/sdk-amm",
+  "repository": "https://github.com/Agin-DropDisco/dexs-sdk#harmony-sdk",
   "keywords": [
     "dexswap",
     "ethereum",
@@ -26,8 +26,8 @@
     "@makerdao/multicall": "^0.11.0",
     "big.js": "^5.2.2",
     "decimal.js-light": "^2.5.0",
-    "dexswap-core": "git://github.com/DexSwap-Project/Contracts-Factory.git#main",
-    "dexswap-periphery": "git://github.com/DexSwap-Project/Contract-Router.git#main",
+    "dexswap-core": "git://github.com/Agin-DropDisco/dexs-factory.git#a5",
+    "dexswap-periphery": "git://github.com/Agin-DropDisco/dexs-router.git#a5",
     "jsbi": "^3.1.1",
     "node-fetch": "^2.6.1",
     "tiny-invariant": "^1.1.0",

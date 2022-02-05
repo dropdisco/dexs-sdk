@@ -25,6 +25,10 @@ const MINIMUM_STAKED_AMOUNT_NATIVE_CURRENCY: { [chainId in ChainId]: CurrencyAmo
   [ChainId.HARMONY_TESTNET]: CurrencyAmount.nativeCurrency(
     utils.parseUnits('0.05', Token.getNative(ChainId.HARMONY_TESTNET).decimals).toString(),
     ChainId.HARMONY_TESTNET
+  ),
+  [ChainId.MUMBAI]: CurrencyAmount.nativeCurrency(
+    utils.parseUnits('0.05', Token.getNative(ChainId.MUMBAI).decimals).toString(),
+    ChainId.MUMBAI
   )
 }
 

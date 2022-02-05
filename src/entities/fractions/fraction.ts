@@ -5,7 +5,7 @@ import _Big, { RoundingMode } from 'big.js'
 import toFormat from 'toformat'
 
 import { BigintIsh, Rounding } from '../../constants'
-import { ONES } from '../../constants'
+import { ONE } from '../../constants'
 import { parseBigintIsh } from '../../utils'
 
 const Decimal = toFormat(_Decimal)
@@ -27,7 +27,7 @@ export class Fraction {
   public readonly numerator: JSBI
   public readonly denominator: JSBI
 
-  public constructor(numerator: BigintIsh, denominator: BigintIsh = ONES) {
+  public constructor(numerator: BigintIsh, denominator: BigintIsh = ONE) {
     this.numerator = parseBigintIsh(numerator)
     this.denominator = parseBigintIsh(denominator)
   }

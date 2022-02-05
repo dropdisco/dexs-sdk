@@ -3216,7 +3216,7 @@ detect-newline@^2.1.0:
 
 "dexswap-core@git://github.com/Agin-DropDisco/dexs-factory.git#polygonXharmony":
   version "0.1.6"
-  resolved "git://github.com/Agin-DropDisco/dexs-factory.git#91f43eb98c0e6956af820a49c20d616c7d5c505b"
+  resolved "git://github.com/Agin-DropDisco/dexs-factory.git#0a3220358fdfa7621635d34aef443c1087fc1e31"
   dependencies:
     "@harmony-js/core" "^0.1.57"
     "@truffle/hdwallet-provider" "^1.4.0"
@@ -3226,7 +3226,7 @@ detect-newline@^2.1.0:
 
 "dexswap-periphery@git://github.com/Agin-DropDisco/dexs-router.git#polygonXharmony":
   version "0.3.4"
-  resolved "git://github.com/Agin-DropDisco/dexs-router.git#8fee93c2d7f7ff53d0f1ae9ac7090118646b15f5"
+  resolved "git://github.com/Agin-DropDisco/dexs-router.git#2c97e1a8ae2ff03da0e4887c24d943d4db0cf864"
   dependencies:
     "@truffle/hdwallet-provider" "^1.4.0"
 

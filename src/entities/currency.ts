@@ -14,15 +14,15 @@ export class Currency {
   public readonly name?: string
 
   public static readonly USD: Currency = new Currency(18, 'USD', 'US dollar')
-  public static readonly UST: Currency = new Currency(18, 'UST', 'Wrapped UST Token')
   public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether')
-  public static readonly ONE: Currency = new Currency(18, 'ONE', 'ONE')
+  public static readonly HARMONY: Currency = new Currency(18, 'ONE', 'ONE')
+  public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
     [ChainId.RINKEBY]: Currency.ETHER,
-    [ChainId.HARMONY]: Currency.ONE,
-    [ChainId.HARMONY_TESTNET]: Currency.ONE
+    [ChainId.HARMONY]: Currency.HARMONY,
+    [ChainId.HARMONY_TESTNET]: Currency.HARMONY,
   }
 
   /**
@@ -49,6 +49,5 @@ export class Currency {
 }
 
 export const USD = Currency.USD
-export const UST = Currency.UST
 export const ETHER = Currency.ETHER
-export const ONE = Currency.ONE
+export const HARMONY = Currency.HARMONY

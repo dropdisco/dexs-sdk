@@ -43,9 +43,9 @@ export class Token extends Currency {
 
   // TODO:
   public static readonly xDEXS: { [key: number]: Token } = {
-    [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0xA9c6d7F92a894310B9C04968326A9dE6D0e38724', 18, 'xDEXS', 'xDEXS'),
-    [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0xAe04642872a4B3a479D1404048e44166c9aA7a19', 18, 'xDEXS', 'xDEXS'),
-    [ChainId.HARMONY_TESTNET]: new Token(ChainId.HARMONY_TESTNET, '0xc106b786a6c7C698fcAeD6D49609e1b40C6694ef', 18, 'xDEXS', 'xDEXS'),
+    [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0xA9c6d7F92a894310B9C04968326A9dE6D0e38724', 18, 'DEZU', 'DexSwapZoo'),
+    [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x6d3363020963a64B4DfA8f7F9f4Dc0cBaDCe7858', 18, 'DEZU', 'DexSwapZoo'),
+    [ChainId.HARMONY_TESTNET]: new Token(ChainId.HARMONY_TESTNET, '0x8E8645D7A03d53bF41BcFfE26CfCCBA14354028C', 18, 'DEZU', 'DexSwapZoo'),
   }
 
   public static readonly WONE: { [key: number]: Token } = {
@@ -57,7 +57,7 @@ export class Token extends Currency {
     [ChainId.MAINNET]: Token.WETH[ChainId.MAINNET],
     [ChainId.RINKEBY]: Token.WETH[ChainId.RINKEBY],
     [ChainId.HARMONY]: Token.WONE[ChainId.HARMONY],
-    [ChainId.HARMONY_TESTNET]: Token.WONE[ChainId.HARMONY_TESTNET]
+    [ChainId.HARMONY_TESTNET]: Token.WETH[ChainId.HARMONY_TESTNET],
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {

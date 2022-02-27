@@ -9,7 +9,7 @@ import {
   BigintIsh,
   MINIMUM_LIQUIDITY,
   ZERO,
-  ONES,
+  ONE,
   _30,
   _10000,
   defaultSwapFee,
@@ -24,6 +24,7 @@ import { LiquidityMiningCampaign } from './liquidity-mining-campaign'
 
 const INITIAL_CACHE_STATE: { [chainId in ChainId]: any } = {
   [ChainId.MAINNET]: {},
+  [ChainId.ALFAJORES]: {},
   [ChainId.HARMONY]: {},
   [ChainId.HARMONY_TESTNET]: {},
   [ChainId.RINKEBY]: {}
@@ -46,7 +47,7 @@ let PAIR_ADDRESS_CACHE: {
   [RoutablePlatform.VIPERSWAP.name]: {
     ...INITIAL_CACHE_STATE
   },
-  [RoutablePlatform.SWOOP.name]: {
+  [RoutablePlatform.UBESWAP.name]: {
     ...INITIAL_CACHE_STATE
   }
 }
@@ -225,7 +226,7 @@ export class Pair {
     )
     const inputAmount = new TokenAmount(
       outputAmount.token.equals(this.token0) ? this.token1 : this.token0,
-      JSBI.add(JSBI.divide(numerator, denominator), ONES)
+      JSBI.add(JSBI.divide(numerator, denominator), ONE)
     )
     return [
       inputAmount,

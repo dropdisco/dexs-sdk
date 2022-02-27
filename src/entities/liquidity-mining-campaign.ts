@@ -25,7 +25,12 @@ const MINIMUM_STAKED_AMOUNT_NATIVE_CURRENCY: { [chainId in ChainId]: CurrencyAmo
   [ChainId.HARMONY_TESTNET]: CurrencyAmount.nativeCurrency(
     utils.parseUnits('0.05', Token.getNative(ChainId.HARMONY_TESTNET).decimals).toString(),
     ChainId.HARMONY_TESTNET
+  ),
+  [ChainId.ALFAJORES]: CurrencyAmount.nativeCurrency(
+    utils.parseUnits('0.05', Token.getNative(ChainId.ALFAJORES).decimals).toString(),
+    ChainId.ALFAJORES
   )
+
 }
 
 export class LiquidityMiningCampaign {

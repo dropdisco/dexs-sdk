@@ -38,6 +38,13 @@ export class Token extends Currency {
       18,
       'WONE',
       'Wrapped ONE'
+    ),
+    [ChainId.ALFAJORES]: new Token(
+      ChainId.ALFAJORES,
+      '0x524d97A67f50F4A062C28c74F60703Aec9028a94',
+      18,
+      'WCELO',
+      'Wrapped Celo'
     )
   }
 
@@ -46,6 +53,7 @@ export class Token extends Currency {
     [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0xA9c6d7F92a894310B9C04968326A9dE6D0e38724', 18, 'DEZU', 'DexSwapZoo'),
     [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x6d3363020963a64B4DfA8f7F9f4Dc0cBaDCe7858', 18, 'DEZU', 'DexSwapZoo'),
     [ChainId.HARMONY_TESTNET]: new Token(ChainId.HARMONY_TESTNET, '0x8E8645D7A03d53bF41BcFfE26CfCCBA14354028C', 18, 'DEZU', 'DexSwapZoo'),
+    [ChainId.ALFAJORES]: new Token(ChainId.ALFAJORES, '0x64b8EaB670f580817b26023f376bb91E32501fE6', 18, 'DEZU', 'DexSwapZoo'),
   }
 
   public static readonly WONE: { [key: number]: Token } = {
@@ -53,11 +61,13 @@ export class Token extends Currency {
     [ChainId.HARMONY_TESTNET]: new Token(ChainId.HARMONY_TESTNET, '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2', 18, 'WONE', 'Wrapped One')
   }
 
+
   private static readonly NATIVE_CURRENCY_WRAPPER: { [chainId in ChainId]: Token } = {
     [ChainId.MAINNET]: Token.WETH[ChainId.MAINNET],
     [ChainId.RINKEBY]: Token.WETH[ChainId.RINKEBY],
     [ChainId.HARMONY]: Token.WONE[ChainId.HARMONY],
     [ChainId.HARMONY_TESTNET]: Token.WETH[ChainId.HARMONY_TESTNET],
+    [ChainId.ALFAJORES]: Token.WETH[ChainId.ALFAJORES],
   }
 
   public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {

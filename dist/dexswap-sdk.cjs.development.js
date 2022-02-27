@@ -1118,6 +1118,7 @@ var _FACTORY_ADDRESS, _ROUTER_ADDRESS, _STAKING_REWARDS_FACT, _SOLIDITY_TYPE_MAX
   ChainId[ChainId["RINKEBY"] = 4] = "RINKEBY";
   ChainId[ChainId["HARMONY"] = 1666600000] = "HARMONY";
   ChainId[ChainId["HARMONY_TESTNET"] = 1666700000] = "HARMONY_TESTNET";
+  ChainId[ChainId["ALFAJORES"] = 44787] = "ALFAJORES";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {
@@ -1132,10 +1133,11 @@ var _FACTORY_ADDRESS, _ROUTER_ADDRESS, _STAKING_REWARDS_FACT, _SOLIDITY_TYPE_MAX
 })(exports.Rounding || (exports.Rounding = {}));
 
 var ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
-var FACTORY_ADDRESS = (_FACTORY_ADDRESS = {}, _FACTORY_ADDRESS[exports.ChainId.MAINNET] = _contracts_json.mainnet.factory, _FACTORY_ADDRESS[exports.ChainId.RINKEBY] = _contracts_json.rinkeby.factory, _FACTORY_ADDRESS[exports.ChainId.HARMONY] = _contracts_json.harmony.factory, _FACTORY_ADDRESS[exports.ChainId.HARMONY_TESTNET] = _contracts_json.harmony_testnet.factory, _FACTORY_ADDRESS);
-var ROUTER_ADDRESS = (_ROUTER_ADDRESS = {}, _ROUTER_ADDRESS[exports.ChainId.MAINNET] = _contracts_json$1.mainnet.router, _ROUTER_ADDRESS[exports.ChainId.RINKEBY] = _contracts_json$1.rinkeby.router, _ROUTER_ADDRESS[exports.ChainId.HARMONY] = _contracts_json$1.harmony.router, _ROUTER_ADDRESS[exports.ChainId.HARMONY_TESTNET] = _contracts_json$1.harmony_testnet.router, _ROUTER_ADDRESS);
-var STAKING_REWARDS_FACTORY_ADDRESS = (_STAKING_REWARDS_FACT = {}, _STAKING_REWARDS_FACT[exports.ChainId.MAINNET] = '0x0000000000000000000000000000000000001234', _STAKING_REWARDS_FACT[exports.ChainId.RINKEBY] = '0x709db16a6ef437197938256460c49183dc36ca4d', _STAKING_REWARDS_FACT[exports.ChainId.HARMONY] = '0x3b2Cc22b41ed373a2E512E49D049d0E61ED226f8', _STAKING_REWARDS_FACT[exports.ChainId.HARMONY_TESTNET] = '0x15b61cc2ac17e9826277b3ff41aa2644a774daab', _STAKING_REWARDS_FACT);
-var INIT_CODE_HASH = '0x73d6dcc94c11d81141f8d9cdd590d156f773f79e2639eb9bb987549a338b82da';
+var FACTORY_ADDRESS = (_FACTORY_ADDRESS = {}, _FACTORY_ADDRESS[exports.ChainId.MAINNET] = _contracts_json.mainnet.factory, _FACTORY_ADDRESS[exports.ChainId.RINKEBY] = _contracts_json.rinkeby.factory, _FACTORY_ADDRESS[exports.ChainId.HARMONY] = _contracts_json.harmony.factory, _FACTORY_ADDRESS[exports.ChainId.HARMONY_TESTNET] = _contracts_json.harmony_testnet.factory, _FACTORY_ADDRESS[exports.ChainId.ALFAJORES] = _contracts_json.alfajores.factory, _FACTORY_ADDRESS);
+var ROUTER_ADDRESS = (_ROUTER_ADDRESS = {}, _ROUTER_ADDRESS[exports.ChainId.MAINNET] = _contracts_json$1.mainnet.router, _ROUTER_ADDRESS[exports.ChainId.RINKEBY] = _contracts_json$1.rinkeby.router, _ROUTER_ADDRESS[exports.ChainId.HARMONY] = _contracts_json$1.harmony.router, _ROUTER_ADDRESS[exports.ChainId.HARMONY_TESTNET] = _contracts_json$1.harmony_testnet.router, _ROUTER_ADDRESS[exports.ChainId.ALFAJORES] = _contracts_json$1.alfajores.router, _ROUTER_ADDRESS);
+var STAKING_REWARDS_FACTORY_ADDRESS = (_STAKING_REWARDS_FACT = {}, _STAKING_REWARDS_FACT[exports.ChainId.MAINNET] = '0x0000000000000000000000000000000000001234', _STAKING_REWARDS_FACT[exports.ChainId.RINKEBY] = '0x709db16a6ef437197938256460c49183dc36ca4d', _STAKING_REWARDS_FACT[exports.ChainId.HARMONY] = '0x3b2Cc22b41ed373a2E512E49D049d0E61ED226f8', _STAKING_REWARDS_FACT[exports.ChainId.HARMONY_TESTNET] = '0x15b61cc2ac17e9826277b3ff41aa2644a774daab', _STAKING_REWARDS_FACT[exports.ChainId.ALFAJORES] = '0x7042A1a7ca6DcDB8fEAEf1dd910d9dbace7Dfa63', _STAKING_REWARDS_FACT); // export const INIT_CODE_HASH = '0x73d6dcc94c11d81141f8d9cdd590d156f773f79e2639eb9bb987549a338b82da'// OLD
+
+var INIT_CODE_HASH = '0x8e238a2a8b947c141eaf7dc617b2d765c57280c05c2062c045c200c62b16cf0c';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -1159,7 +1161,7 @@ var defaultProtocolFeeDenominator = FIVE;
 })(exports.SolidityType || (exports.SolidityType = {}));
 
 var SOLIDITY_TYPE_MAXIMA = (_SOLIDITY_TYPE_MAXIMA = {}, _SOLIDITY_TYPE_MAXIMA[exports.SolidityType.uint8] = /*#__PURE__*/JSBI.BigInt('0xff'), _SOLIDITY_TYPE_MAXIMA[exports.SolidityType.uint256] = /*#__PURE__*/JSBI.BigInt('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'), _SOLIDITY_TYPE_MAXIMA);
-var MULTICALL_ADDRESS = (_MULTICALL_ADDRESS = {}, _MULTICALL_ADDRESS[exports.ChainId.MAINNET] = '0xeefba1e63905ef1d7acba5a8513c70307c1ce441', _MULTICALL_ADDRESS[exports.ChainId.HARMONY] = '0x4e24A3D6B6D47A4F56e4025C8A514b45C66e6d7A', _MULTICALL_ADDRESS[exports.ChainId.RINKEBY] = '0x8c9E7447ABE0607a610a1C3E7cCC1A7B51f729C2', _MULTICALL_ADDRESS[exports.ChainId.HARMONY_TESTNET] = '0xD76bF711EC7FA3740fC0ddae1A7CB648E77604e8', _MULTICALL_ADDRESS);
+var MULTICALL_ADDRESS = (_MULTICALL_ADDRESS = {}, _MULTICALL_ADDRESS[exports.ChainId.MAINNET] = '0xeefba1e63905ef1d7acba5a8513c70307c1ce441', _MULTICALL_ADDRESS[exports.ChainId.HARMONY] = '0x4e24A3D6B6D47A4F56e4025C8A514b45C66e6d7A', _MULTICALL_ADDRESS[exports.ChainId.RINKEBY] = '0x8c9E7447ABE0607a610a1C3E7cCC1A7B51f729C2', _MULTICALL_ADDRESS[exports.ChainId.HARMONY_TESTNET] = '0xD76bF711EC7FA3740fC0ddae1A7CB648E77604e8', _MULTICALL_ADDRESS[exports.ChainId.ALFAJORES] = '0x3d8315f6BBdc0Afa659421a5856D4eC12c2F7Efa', _MULTICALL_ADDRESS);
 
 function validateSolidityTypeInstance(value, solidityType) {
   !JSBI.greaterThanOrEqual(value, ZERO) ?  invariant(false, value + " is not a " + solidityType + ".")  : void 0;
@@ -1485,10 +1487,12 @@ Currency.USD = /*#__PURE__*/new Currency(18, 'USD', 'US dollar');
 Currency.ETHER = /*#__PURE__*/new Currency(18, 'ETH', 'Ether');
 Currency.HARMONY = /*#__PURE__*/new Currency(18, 'ONE', 'ONE');
 Currency.MATIC = /*#__PURE__*/new Currency(18, 'MATIC', 'MATIC');
-Currency.NATIVE_CURRENCY = (_Currency$NATIVE_CURR = {}, _Currency$NATIVE_CURR[exports.ChainId.MAINNET] = Currency.ETHER, _Currency$NATIVE_CURR[exports.ChainId.RINKEBY] = Currency.ETHER, _Currency$NATIVE_CURR[exports.ChainId.HARMONY] = Currency.HARMONY, _Currency$NATIVE_CURR[exports.ChainId.HARMONY_TESTNET] = Currency.HARMONY, _Currency$NATIVE_CURR);
+Currency.CELO = /*#__PURE__*/new Currency(18, 'CELO', 'CELO');
+Currency.NATIVE_CURRENCY = (_Currency$NATIVE_CURR = {}, _Currency$NATIVE_CURR[exports.ChainId.MAINNET] = Currency.ETHER, _Currency$NATIVE_CURR[exports.ChainId.RINKEBY] = Currency.ETHER, _Currency$NATIVE_CURR[exports.ChainId.HARMONY] = Currency.HARMONY, _Currency$NATIVE_CURR[exports.ChainId.ALFAJORES] = Currency.CELO, _Currency$NATIVE_CURR[exports.ChainId.HARMONY_TESTNET] = Currency.HARMONY, _Currency$NATIVE_CURR);
 var USD = Currency.USD;
 var ETHER = Currency.ETHER;
 var HARMONY = Currency.HARMONY;
+var CELO = Currency.CELO;
 
 var _Token$WETH, _Token$xDEXS, _Token$WONE, _Token$NATIVE_CURRENC;
 /**
@@ -1546,11 +1550,11 @@ var Token = /*#__PURE__*/function (_Currency) {
 
   return Token;
 }(Currency);
-Token.WETH = (_Token$WETH = {}, _Token$WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _Token$WETH[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _Token$WETH[exports.ChainId.HARMONY] = /*#__PURE__*/new Token(exports.ChainId.HARMONY, '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a', 18, 'WONE', 'Wrapped ONE'), _Token$WETH[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.HARMONY_TESTNET, '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2', 18, 'WONE', 'Wrapped ONE'), _Token$WETH); // TODO:
+Token.WETH = (_Token$WETH = {}, _Token$WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _Token$WETH[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _Token$WETH[exports.ChainId.HARMONY] = /*#__PURE__*/new Token(exports.ChainId.HARMONY, '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a', 18, 'WONE', 'Wrapped ONE'), _Token$WETH[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.HARMONY_TESTNET, '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2', 18, 'WONE', 'Wrapped ONE'), _Token$WETH[exports.ChainId.ALFAJORES] = /*#__PURE__*/new Token(exports.ChainId.ALFAJORES, '0x524d97A67f50F4A062C28c74F60703Aec9028a94', 18, 'WCELO', 'Wrapped Celo'), _Token$WETH); // TODO:
 
-Token.xDEXS = (_Token$xDEXS = {}, _Token$xDEXS[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xA9c6d7F92a894310B9C04968326A9dE6D0e38724', 18, 'DEZU', 'DexSwapZoo'), _Token$xDEXS[exports.ChainId.HARMONY] = /*#__PURE__*/new Token(exports.ChainId.HARMONY, '0x6d3363020963a64B4DfA8f7F9f4Dc0cBaDCe7858', 18, 'DEZU', 'DexSwapZoo'), _Token$xDEXS[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.HARMONY_TESTNET, '0x8E8645D7A03d53bF41BcFfE26CfCCBA14354028C', 18, 'DEZU', 'DexSwapZoo'), _Token$xDEXS);
+Token.xDEXS = (_Token$xDEXS = {}, _Token$xDEXS[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xA9c6d7F92a894310B9C04968326A9dE6D0e38724', 18, 'DEZU', 'DexSwapZoo'), _Token$xDEXS[exports.ChainId.HARMONY] = /*#__PURE__*/new Token(exports.ChainId.HARMONY, '0x6d3363020963a64B4DfA8f7F9f4Dc0cBaDCe7858', 18, 'DEZU', 'DexSwapZoo'), _Token$xDEXS[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.HARMONY_TESTNET, '0x8E8645D7A03d53bF41BcFfE26CfCCBA14354028C', 18, 'DEZU', 'DexSwapZoo'), _Token$xDEXS[exports.ChainId.ALFAJORES] = /*#__PURE__*/new Token(exports.ChainId.ALFAJORES, '0x64b8EaB670f580817b26023f376bb91E32501fE6', 18, 'DEZU', 'DexSwapZoo'), _Token$xDEXS);
 Token.WONE = (_Token$WONE = {}, _Token$WONE[exports.ChainId.HARMONY] = /*#__PURE__*/new Token(exports.ChainId.HARMONY, '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a', 18, 'WONE', 'Wrapped One'), _Token$WONE[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.HARMONY_TESTNET, '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2', 18, 'WONE', 'Wrapped One'), _Token$WONE);
-Token.NATIVE_CURRENCY_WRAPPER = (_Token$NATIVE_CURRENC = {}, _Token$NATIVE_CURRENC[exports.ChainId.MAINNET] = Token.WETH[exports.ChainId.MAINNET], _Token$NATIVE_CURRENC[exports.ChainId.RINKEBY] = Token.WETH[exports.ChainId.RINKEBY], _Token$NATIVE_CURRENC[exports.ChainId.HARMONY] = Token.WONE[exports.ChainId.HARMONY], _Token$NATIVE_CURRENC[exports.ChainId.HARMONY_TESTNET] = Token.WETH[exports.ChainId.HARMONY_TESTNET], _Token$NATIVE_CURRENC);
+Token.NATIVE_CURRENCY_WRAPPER = (_Token$NATIVE_CURRENC = {}, _Token$NATIVE_CURRENC[exports.ChainId.MAINNET] = Token.WETH[exports.ChainId.MAINNET], _Token$NATIVE_CURRENC[exports.ChainId.RINKEBY] = Token.WETH[exports.ChainId.RINKEBY], _Token$NATIVE_CURRENC[exports.ChainId.HARMONY] = Token.WONE[exports.ChainId.HARMONY], _Token$NATIVE_CURRENC[exports.ChainId.HARMONY_TESTNET] = Token.WETH[exports.ChainId.HARMONY_TESTNET], _Token$NATIVE_CURRENC[exports.ChainId.ALFAJORES] = Token.WETH[exports.ChainId.ALFAJORES], _Token$NATIVE_CURRENC);
 /**
  * Compares two currencies for equality
  */
@@ -1898,14 +1902,18 @@ var Price = /*#__PURE__*/function (_Fraction) {
   return Price;
 }(Fraction);
 
-var _RoutablePlatform, _RoutablePlatform2, _RoutablePlatform3, _RoutablePlatform4, _RoutablePlatform5, _RoutablePlatform6;
+var _RoutablePlatform, _RoutablePlatform2, _RoutablePlatform3, _RoutablePlatform4, _RoutablePlatform5, _RoutablePlatform6, _RoutablePlatform7, _RoutablePlatform8;
 var UNISWAP_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f';
 var SUSHISWAP_FACTORY_ADDRESS = '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac';
 var VIPERSWAP_FACTORY_ADDRESS = '0x7D02c116b98d0965ba7B642ace0183ad8b8D2196'; // mainnet
 
+var UBESWAP_FACTORY_ADDRESS = '0x62d5b84be28a183abb507e125b384122d2c25fae'; // mainnet
+
 var UNISWAP_ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D';
 var SUSHISWAP_ROUTER_ADDRESS = '0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F';
 var VIPERSWAP_ROUTER_ADDRESS = '0xf012702a5f0e54015362cBCA26a26fc90AA832a3'; // mainnet //
+
+var UBESWAP_ROUTER_ADDRESS = '0xe3d8bd6aed4f159bc8000a9cd47cffdb95f96121'; // mainnet //
 
 var RoutablePlatform = /*#__PURE__*/function () {
   function RoutablePlatform(name, factoryAddress, routerAddress, initCodeHash, defaultSwapFee) {
@@ -1928,10 +1936,11 @@ RoutablePlatform.DEXSWAP = /*#__PURE__*/new RoutablePlatform('DEXSWAP', FACTORY_
 RoutablePlatform.UNISWAP = /*#__PURE__*/new RoutablePlatform('Uniswap', (_RoutablePlatform = {}, _RoutablePlatform[exports.ChainId.MAINNET] = UNISWAP_FACTORY_ADDRESS, _RoutablePlatform[exports.ChainId.RINKEBY] = UNISWAP_FACTORY_ADDRESS, _RoutablePlatform), (_RoutablePlatform2 = {}, _RoutablePlatform2[exports.ChainId.MAINNET] = UNISWAP_ROUTER_ADDRESS, _RoutablePlatform2[exports.ChainId.RINKEBY] = UNISWAP_ROUTER_ADDRESS, _RoutablePlatform2), '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f', _30);
 RoutablePlatform.SUSHISWAP = /*#__PURE__*/new RoutablePlatform('Sushiswap', (_RoutablePlatform3 = {}, _RoutablePlatform3[exports.ChainId.MAINNET] = SUSHISWAP_FACTORY_ADDRESS, _RoutablePlatform3[exports.ChainId.RINKEBY] = SUSHISWAP_FACTORY_ADDRESS, _RoutablePlatform3), (_RoutablePlatform4 = {}, _RoutablePlatform4[exports.ChainId.MAINNET] = SUSHISWAP_ROUTER_ADDRESS, _RoutablePlatform4[exports.ChainId.RINKEBY] = SUSHISWAP_ROUTER_ADDRESS, _RoutablePlatform4), '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303', _30);
 RoutablePlatform.VIPERSWAP = /*#__PURE__*/new RoutablePlatform('Viperswap', (_RoutablePlatform5 = {}, _RoutablePlatform5[exports.ChainId.HARMONY] = VIPERSWAP_FACTORY_ADDRESS, _RoutablePlatform5), (_RoutablePlatform6 = {}, _RoutablePlatform6[exports.ChainId.HARMONY] = VIPERSWAP_ROUTER_ADDRESS, _RoutablePlatform6), '0x162f79e638367cd45a118c778971dfd8d96c625d2798d3b71994b035cfe9b6dc', _30);
+RoutablePlatform.UBESWAP = /*#__PURE__*/new RoutablePlatform('Ubeswap', (_RoutablePlatform7 = {}, _RoutablePlatform7[exports.ChainId.ALFAJORES] = UBESWAP_FACTORY_ADDRESS, _RoutablePlatform7), (_RoutablePlatform8 = {}, _RoutablePlatform8[exports.ChainId.ALFAJORES] = UBESWAP_ROUTER_ADDRESS, _RoutablePlatform8), '0x162f79e638367cd45a118c778971dfd8d96c625d2798d3b71994b035cfe9b6dc', _30);
 
 var _INITIAL_CACHE_STATE, _PAIR_ADDRESS_CACHE;
-var INITIAL_CACHE_STATE = (_INITIAL_CACHE_STATE = {}, _INITIAL_CACHE_STATE[exports.ChainId.MAINNET] = {}, _INITIAL_CACHE_STATE[exports.ChainId.HARMONY] = {}, _INITIAL_CACHE_STATE[exports.ChainId.HARMONY_TESTNET] = {}, _INITIAL_CACHE_STATE[exports.ChainId.RINKEBY] = {}, _INITIAL_CACHE_STATE);
-var PAIR_ADDRESS_CACHE = (_PAIR_ADDRESS_CACHE = {}, _PAIR_ADDRESS_CACHE[RoutablePlatform.DEXSWAP.name] = /*#__PURE__*/_extends({}, INITIAL_CACHE_STATE), _PAIR_ADDRESS_CACHE[RoutablePlatform.SUSHISWAP.name] = /*#__PURE__*/_extends({}, INITIAL_CACHE_STATE), _PAIR_ADDRESS_CACHE[RoutablePlatform.UNISWAP.name] = /*#__PURE__*/_extends({}, INITIAL_CACHE_STATE), _PAIR_ADDRESS_CACHE[RoutablePlatform.VIPERSWAP.name] = /*#__PURE__*/_extends({}, INITIAL_CACHE_STATE), _PAIR_ADDRESS_CACHE);
+var INITIAL_CACHE_STATE = (_INITIAL_CACHE_STATE = {}, _INITIAL_CACHE_STATE[exports.ChainId.MAINNET] = {}, _INITIAL_CACHE_STATE[exports.ChainId.ALFAJORES] = {}, _INITIAL_CACHE_STATE[exports.ChainId.HARMONY] = {}, _INITIAL_CACHE_STATE[exports.ChainId.HARMONY_TESTNET] = {}, _INITIAL_CACHE_STATE[exports.ChainId.RINKEBY] = {}, _INITIAL_CACHE_STATE);
+var PAIR_ADDRESS_CACHE = (_PAIR_ADDRESS_CACHE = {}, _PAIR_ADDRESS_CACHE[RoutablePlatform.DEXSWAP.name] = /*#__PURE__*/_extends({}, INITIAL_CACHE_STATE), _PAIR_ADDRESS_CACHE[RoutablePlatform.SUSHISWAP.name] = /*#__PURE__*/_extends({}, INITIAL_CACHE_STATE), _PAIR_ADDRESS_CACHE[RoutablePlatform.UNISWAP.name] = /*#__PURE__*/_extends({}, INITIAL_CACHE_STATE), _PAIR_ADDRESS_CACHE[RoutablePlatform.VIPERSWAP.name] = /*#__PURE__*/_extends({}, INITIAL_CACHE_STATE), _PAIR_ADDRESS_CACHE[RoutablePlatform.UBESWAP.name] = /*#__PURE__*/_extends({}, INITIAL_CACHE_STATE), _PAIR_ADDRESS_CACHE);
 var Pair = /*#__PURE__*/function () {
   function Pair(tokenAmountA, tokenAmountB, swapFee, protocolFeeDenominator, platform, liquidityMiningCampaigns) {
     if (platform === void 0) {
@@ -2607,7 +2616,7 @@ var PricedTokenAmount = /*#__PURE__*/function (_TokenAmount) {
 
 var _MINIMUM_STAKED_AMOUN;
 
-var MINIMUM_STAKED_AMOUNT_NATIVE_CURRENCY = (_MINIMUM_STAKED_AMOUN = {}, _MINIMUM_STAKED_AMOUN[exports.ChainId.RINKEBY] = /*#__PURE__*/CurrencyAmount.nativeCurrency( /*#__PURE__*/ethers.utils.parseUnits('0.05', Token.getNative(exports.ChainId.RINKEBY).decimals).toString(), exports.ChainId.RINKEBY), _MINIMUM_STAKED_AMOUN[exports.ChainId.MAINNET] = /*#__PURE__*/CurrencyAmount.nativeCurrency( /*#__PURE__*/ethers.utils.parseUnits('0.1', Token.getNative(exports.ChainId.MAINNET).decimals).toString(), exports.ChainId.MAINNET), _MINIMUM_STAKED_AMOUN[exports.ChainId.HARMONY] = /*#__PURE__*/CurrencyAmount.nativeCurrency( /*#__PURE__*/ethers.utils.parseUnits('0.05', Token.getNative(exports.ChainId.HARMONY).decimals).toString(), exports.ChainId.HARMONY), _MINIMUM_STAKED_AMOUN[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/CurrencyAmount.nativeCurrency( /*#__PURE__*/ethers.utils.parseUnits('0.05', Token.getNative(exports.ChainId.HARMONY_TESTNET).decimals).toString(), exports.ChainId.HARMONY_TESTNET), _MINIMUM_STAKED_AMOUN);
+var MINIMUM_STAKED_AMOUNT_NATIVE_CURRENCY = (_MINIMUM_STAKED_AMOUN = {}, _MINIMUM_STAKED_AMOUN[exports.ChainId.RINKEBY] = /*#__PURE__*/CurrencyAmount.nativeCurrency( /*#__PURE__*/ethers.utils.parseUnits('0.05', Token.getNative(exports.ChainId.RINKEBY).decimals).toString(), exports.ChainId.RINKEBY), _MINIMUM_STAKED_AMOUN[exports.ChainId.MAINNET] = /*#__PURE__*/CurrencyAmount.nativeCurrency( /*#__PURE__*/ethers.utils.parseUnits('0.1', Token.getNative(exports.ChainId.MAINNET).decimals).toString(), exports.ChainId.MAINNET), _MINIMUM_STAKED_AMOUN[exports.ChainId.HARMONY] = /*#__PURE__*/CurrencyAmount.nativeCurrency( /*#__PURE__*/ethers.utils.parseUnits('0.05', Token.getNative(exports.ChainId.HARMONY).decimals).toString(), exports.ChainId.HARMONY), _MINIMUM_STAKED_AMOUN[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/CurrencyAmount.nativeCurrency( /*#__PURE__*/ethers.utils.parseUnits('0.05', Token.getNative(exports.ChainId.HARMONY_TESTNET).decimals).toString(), exports.ChainId.HARMONY_TESTNET), _MINIMUM_STAKED_AMOUN[exports.ChainId.ALFAJORES] = /*#__PURE__*/CurrencyAmount.nativeCurrency( /*#__PURE__*/ethers.utils.parseUnits('0.05', Token.getNative(exports.ChainId.ALFAJORES).decimals).toString(), exports.ChainId.ALFAJORES), _MINIMUM_STAKED_AMOUN);
 var LiquidityMiningCampaign = /*#__PURE__*/function () {
   function LiquidityMiningCampaign(startsAt, endsAt, targetedPair, rewards, staked, locked, stakingCap, address) {
     !JSBI.lessThan(parseBigintIsh(startsAt), parseBigintIsh(endsAt)) ?  invariant(false, 'INCONSISTENT_DATES')  : void 0;
@@ -3022,6 +3031,7 @@ var Fetcher = /*#__PURE__*/function () {
 }();
 
 exports.JSBI = JSBI;
+exports.CELO = CELO;
 exports.Currency = Currency;
 exports.CurrencyAmount = CurrencyAmount;
 exports.ETHER = ETHER;

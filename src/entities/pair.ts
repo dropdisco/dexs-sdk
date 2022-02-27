@@ -24,6 +24,7 @@ import { LiquidityMiningCampaign } from './liquidity-mining-campaign'
 
 const INITIAL_CACHE_STATE: { [chainId in ChainId]: any } = {
   [ChainId.MAINNET]: {},
+  [ChainId.ALFAJORES]: {},
   [ChainId.HARMONY]: {},
   [ChainId.HARMONY_TESTNET]: {},
   [ChainId.RINKEBY]: {}
@@ -44,6 +45,9 @@ let PAIR_ADDRESS_CACHE: {
     ...INITIAL_CACHE_STATE
   },
   [RoutablePlatform.VIPERSWAP.name]: {
+    ...INITIAL_CACHE_STATE
+  },
+  [RoutablePlatform.UBESWAP.name]: {
     ...INITIAL_CACHE_STATE
   }
 }

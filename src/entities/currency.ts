@@ -17,11 +17,13 @@ export class Currency {
   public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether')
   public static readonly HARMONY: Currency = new Currency(18, 'ONE', 'ONE')
   public static readonly MATIC: Currency = new Currency(18, 'MATIC', 'MATIC')
+  public static readonly CELO: Currency = new Currency(18, 'CELO', 'CELO')
 
   private static readonly NATIVE_CURRENCY: { [chainId in ChainId]: Currency } = {
     [ChainId.MAINNET]: Currency.ETHER,
     [ChainId.RINKEBY]: Currency.ETHER,
     [ChainId.HARMONY]: Currency.HARMONY,
+    [ChainId.ALFAJORES]: Currency.CELO,
     [ChainId.HARMONY_TESTNET]: Currency.HARMONY,
   }
 
@@ -51,3 +53,4 @@ export class Currency {
 export const USD = Currency.USD
 export const ETHER = Currency.ETHER
 export const HARMONY = Currency.HARMONY
+export const CELO = Currency.CELO

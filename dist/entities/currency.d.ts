@@ -12,6 +12,7 @@ export declare class Currency {
     static readonly ETHER: Currency;
     static readonly HARMONY: Currency;
     static readonly MATIC: Currency;
+    static readonly CELO: Currency;
     private static readonly NATIVE_CURRENCY;
     /**
      * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -26,3 +27,4 @@ export declare class Currency {
 export declare const USD: Currency;
 export declare const ETHER: Currency;
 export declare const HARMONY: Currency;
+export declare const CELO: Currency;

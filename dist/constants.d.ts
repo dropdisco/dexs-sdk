@@ -7,7 +7,8 @@ export declare enum ChainId {
     MAINNET = 1,
     RINKEBY = 4,
     HARMONY = 1666600000,
-    HARMONY_TESTNET = 1666700000
+    HARMONY_TESTNET = 1666700000,
+    ALFAJORES = 44787
 }
 export declare enum TradeType {
     EXACT_INPUT = 0,
@@ -28,7 +29,7 @@ export declare const ROUTER_ADDRESS: {
 export declare const STAKING_REWARDS_FACTORY_ADDRESS: {
     [chainId in ChainId]: string;
 };
-export declare const INIT_CODE_HASH = "0x73d6dcc94c11d81141f8d9cdd590d156f773f79e2639eb9bb987549a338b82da";
+export declare const INIT_CODE_HASH = "0x8e238a2a8b947c141eaf7dc617b2d765c57280c05c2062c045c200c62b16cf0c";
 export declare const MINIMUM_LIQUIDITY: JSBI;
 export declare const ZERO: JSBI;
 export declare const ONE: JSBI;

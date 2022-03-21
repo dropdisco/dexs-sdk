@@ -3216,7 +3216,7 @@ detect-newline@^2.1.0:
 
 "dexswap-core@git://github.com/Agin-DropDisco/dexs-factory.git#polygonXharmony":
   version "0.1.6"
-  resolved "git://github.com/Agin-DropDisco/dexs-factory.git#93010eba3244ec082a7e425f119defea8241c8c8"
+  resolved "git://github.com/Agin-DropDisco/dexs-factory.git#334d12b5e92c96f3ec752f868bd5832cae6bcd9b"
   dependencies:
     "@harmony-js/core" "^0.1.57"
     "@truffle/hdwallet-provider" "^1.4.0"
@@ -3226,7 +3226,7 @@ detect-newline@^2.1.0:
 
 "dexswap-periphery@git://github.com/Agin-DropDisco/dexs-router.git#polygonXharmony":
   version "0.3.4"
-  resolved "git://github.com/Agin-DropDisco/dexs-router.git#2a97ab0e0e2313447f2a07d23b3ccc02214fd7fc"
+  resolved "git://github.com/Agin-DropDisco/dexs-router.git#158091ecd35513fc0da14350a2b7401502a34214"
   dependencies:
     "@truffle/hdwallet-provider" "^1.4.0"
 
@@ -3256,11 +3256,6 @@ doctrine@^3.0.0:
   integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
   dependencies:
     esutils "^2.0.2"
-
-dom-walk@^0.1.0:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
-  integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
 
 domexception@^1.0.1:
   version "1.0.1"
